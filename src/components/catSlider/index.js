@@ -72,7 +72,7 @@ const CatSlider = (props) => {
             <div className='catSliderSection'>
                 <div className='container-fluid' ref={slider}>
                     <h2 className='hd'>Featured Categories</h2>
-                    <Slider {...settings} className='cat_slider_Main' id="cat_slider_Main" >
+                    <Slider {...settings} className='cat_slider_Main ' id="cat_slider_Main" >
 
 
                         {
