@@ -206,7 +206,7 @@ const Footer = () => {
 
                         <div className='row lastStrip'>
                             <div className='col-md-3 part_1'>
-                            <p>© {new Date().getFullYear()}, Mart - HTML Ecommerce Template All rights reserved</p>
+                            <p>© {new Date().getFullYear()}, Mart - React Ecommerce Template All rights reserved by imtious.dev</p>
                             </div>
 
                             <div className='col-md-6 d-flex part_2'>

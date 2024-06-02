@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# My App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Version
+0.1.0
 
-## Available Scripts
+## Description
+A brief description of what your app does.
 
-In the project directory, you can run:
+## Dependencies
 
-### `npm start`
+This project uses the following libraries and frameworks:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### React and Related Libraries
+- **react**: ^18.2.0
+- **react-dom**: ^18.2.0
+- **react-router-dom**: ^6.16.0
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Material-UI
+- **@mui/material**: ^5.14.11
+- **@mui/icons-material**: ^5.14.11
+- **@mui/styled-engine-sc**: ^5.14.11
 
-### `npm test`
+### Emotion
+- **@emotion/react**: ^11.11.1
+- **@emotion/styled**: ^11.11.0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Styled Components
+- **styled-components**: ^5.3.11
 
-### `npm run build`
+### Firebase
+- **firebase**: ^10.7.0
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Stripe
+- **@stripe/stripe-js**: ^3.0.4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Image Zoom Libraries
+- **custom-react-inner-image-zoom**: ^3.0.6
+- **react-image-zoom**: ^1.3.1
+- **react-inner-image-zoom**: ^3.0.2
+- **reactjs-image-zoom**: ^1.0.8
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Slider Components
+- **react-range-slider-input**: ^3.0.7
+- **rn-range-slider**: ^2.2.2
 
-### `npm run eject`
+### Axios
+- **axios**: ^1.5.1
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Bootstrap
+- **bootstrap**: ^4.1.3
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### React Slick
+- **react-slick**: ^0.29.0
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Lazy Load Images
+- **react-lazy-load-image-component**: ^1.6.0
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Testing Libraries
+- **@testing-library/jest-dom**: ^5.17.0
+- **@testing-library/react**: ^13.4.0
+- **@testing-library/user-event**: ^13.5.0
 
-## Learn More
+### Web Vitals
+- **web-vitals**: ^2.1.4
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### React Scripts
+- **react-scripts**: 5.0.1
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Scripts
 
-### Code Splitting
+- **start**: Starts the development server.
+- **build**: Builds the app for production.
+- **test**: Runs the test suite.
+- **eject**: Ejects the configuration (not recommended).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Browserslist Configuration
 
-### Analyzing the Bundle Size
+### Production
+- https://martecom.vercel.app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Development
+- last 1 chrome version
+- last 1 firefox version
+- last 1 safari version
