@@ -132,14 +132,14 @@ const Cart = () => {
                                                                 </div>
                                                             </td>
 
-                                                            <td width="20%"><span>Rs:  {parseInt(item.price.split(",").join(""))}</span></td>
+                                                            <td width="20%"><span>Tk:  {parseInt(item.price.split(",").join(""))}</span></td>
 
                                                             <td>
                                                                 <QuantityBox item={item} cartItems={cartItems} index={index} updateCart={updateCart} />
                                                             </td>
 
                                                             <td>
-                                                                <span className='text-g'>Rs. {parseInt(item.price.split(",").join("")) * parseInt(item.quantity)}</span>
+                                                                <span className='text-g'>Tk. {parseInt(item.price.split(",").join("")) * parseInt(item.quantity)}</span>
                                                             </td>
 
                                                             <td align='center'>
