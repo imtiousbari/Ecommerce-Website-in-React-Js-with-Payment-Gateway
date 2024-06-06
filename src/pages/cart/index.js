@@ -13,24 +13,52 @@ import { useNavigate } from 'react-router-dom';
 
 import { loadStripe } from '@stripe/stripe-js';
 
+// const Cart = () => {
+//     const [cartItems, setCartItems] = useState([])
+//     const context = useContext(MyContext);
+//     const history = useNavigate();
+
+//     useEffect(() => {
+//        if(context.isLogin!=="true"){
+//         history("/signIn");
+//        }else{
+//         setCartItems(context.cartItems);
+//        }
+       
+
+//         window.scrollTo(0, 0);
+
+//     }, [context.cartItems])
+
 const Cart = () => {
-    const [cartItems, setCartItems] = useState([])
+    const [cartItems, setCartItems] = useState([]);
     const context = useContext(MyContext);
     const history = useNavigate();
 
     useEffect(() => {
-       if(context.isLogin!=="true"){
-        history("/signIn");
-       }else{
-        setCartItems(context.cartItems);
-       }
-       
-
+        if (context.isLogin !== "true") {
+            history("/signIn");
+        } else {
+            setCartItems(context.cartItems);
+        }
         window.scrollTo(0, 0);
+    }, [context.cartItems]);
 
-    }, [context.cartItems])
+    const updateCart = (items) => {
+        setCartItems(items);
+        context.updateCartItems(items);  // Assuming you have a method in context to update cart items
+    };
 
-  
+    const removeItemFromCart = async (itemId) => {
+        try {
+            await axios.delete(`http://localhost:3004/cartItems/${itemId}`);
+            const updatedCartItems = cartItems.filter(item => item.id !== itemId);
+            setCartItems(updatedCartItems);
+            context.updateCartItems(updatedCartItems);  // Update the context with the new cart items
+        } catch (error) {
+            console.error("There was an error removing the item from the cart!", error);
+        }
+    };
 
 
 
@@ -41,21 +69,22 @@ const Cart = () => {
     //     let response = null;
     //     cartItems.length !== 0 &&
     //         cartItems.map((item) => {
-    //             response = axios.delete(`http://localhost:5000/cartItems/${parseInt(item.id)}`);
+    //             response = axios.delete(`http://localhost:3004/cartItems/${parseInt(item.id)}`);
     //         })
     //     if (response !== null) {
-    //         getCartData("http://localhost:5000/cartItems");
+    //         getCartData("http://localhost:3004/cartItems");
     //     }
 
     //     context.emptyCart();
     // }
 
 
-    const updateCart = (items) => {
-        setCartItems(items)
-    }
+    // const updateCart = (items) => {
+    //     setCartItems(items)
+    // }
 
-
+    // const getCartData = (url) => {
+    // }
   
 
 
@@ -237,3 +266,4 @@ const Cart = () => {
 }
 
 export default Cart;
+

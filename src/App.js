@@ -84,16 +84,27 @@ function App() {
 
 
 
-  const removeItemsFromCart = async(id) => {
-    const response = await axios.delete(`http://localhost:3004/cartItems/${id}`);
-    if (response !== null) {
-        getCartData("http://localhost:3004/cartItems");
-    }
-  }
+  // const removeItemsFromCart = async(id) => {
+  //   const response = await axios.delete(`http://localhost:3004/cartItems/${id}`);
+  //   if (response !== null) {
+  //       getCartData("http://localhost:3004/cartItems");
+  //   }
+  // }
 
   const emptyCart = () => {
     setCartItems([])
   }
+  const removeItemsFromCart = async (id) => {
+  try {
+    const response = await axios.delete(`http://localhost:3004/cartItems/${id}`);
+    if (response.status === 200) {
+      setCartItems(cartItems.filter(item => item.id !== id));
+    }
+  } catch (error) {
+    console.log("There was an error removing the item from the cart!", error);
+  }
+}
+
 
 
   const signIn = () => {
@@ -151,7 +162,11 @@ function App() {
           <Route exact={true} path="/signIn" element={<SignIn />} />
           <Route exact={true} path="/signUp" element={<SignUp />} />
           <Route exact={true} path="/checkout" element={<Checkout />} />
-          <Route exact={true} path="/about" element={<About />} />
+          <Route exact={true} path="/about" element={<NotFound />} />
+          <Route exact={true} path="/blog" element={<NotFound />} />
+          <Route exact={true} path="/contact" element={<NotFound />} />
+          <Route exact={true} path="/wishlist" element={<NotFound />} />
+          <Route exact={true} path="/compare" element={<NotFound />} />
           <Route exact={true} path="*" element={<NotFound />} />
         </Routes>
        <Footer/>
