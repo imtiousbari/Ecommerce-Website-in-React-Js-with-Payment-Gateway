@@ -82,3 +82,6 @@ This project uses the following libraries and frameworks:
 - last 1 chrome version
 - last 1 firefox version
 - last 1 safari version
+
+### json-server
+- npx json-server --watch db.json --port 3004
